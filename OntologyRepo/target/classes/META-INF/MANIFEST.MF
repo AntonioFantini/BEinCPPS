@@ -1,0 +1,60 @@
+Manifest-Version: 1.0
+Built-By: afantini
+Class-Path: dependency-jars/openrdf-rio-rdfxml-2.0.1.jar dependency-ja
+ rs/sesame-runtime-4.1.1.jar dependency-jars/sesame-model-4.1.1.jar de
+ pendency-jars/sesame-util-4.1.1.jar dependency-jars/guava-18.0.jar de
+ pendency-jars/sesame-repository-api-4.1.1.jar dependency-jars/sesame-
+ query-4.1.1.jar dependency-jars/sesame-repository-manager-4.1.1.jar d
+ ependency-jars/sesame-repository-event-4.1.1.jar dependency-jars/sesa
+ me-repository-http-4.1.1.jar dependency-jars/sesame-repository-sparql
+ -4.1.1.jar dependency-jars/sesame-repository-contextaware-4.1.1.jar d
+ ependency-jars/sesame-repository-sail-4.1.1.jar dependency-jars/sesam
+ e-queryalgebra-model-4.1.1.jar dependency-jars/sesame-queryalgebra-ev
+ aluation-4.1.1.jar dependency-jars/mapdb-1.0.7.jar dependency-jars/se
+ same-http-client-4.1.1.jar dependency-jars/httpclient-4.4.jar depende
+ ncy-jars/httpcore-4.4.jar dependency-jars/commons-codec-1.10.jar depe
+ ndency-jars/sesame-sail-api-4.1.1.jar dependency-jars/sesame-sail-fed
+ eration-4.1.1.jar dependency-jars/slf4j-api-1.7.10.jar dependency-jar
+ s/sesame-queryparser-api-4.1.1.jar dependency-jars/sesame-queryparser
+ -serql-4.1.1.jar dependency-jars/sesame-queryparser-sparql-4.1.1.jar 
+ dependency-jars/sesame-queryresultio-api-4.1.1.jar dependency-jars/se
+ same-queryresultio-binary-4.1.1.jar dependency-jars/sesame-queryresul
+ tio-sparqljson-4.1.1.jar dependency-jars/jackson-core-2.6.2.jar depen
+ dency-jars/sesame-queryresultio-sparqlxml-4.1.1.jar dependency-jars/s
+ esame-queryresultio-text-4.1.1.jar dependency-jars/opencsv-3.2.jar de
+ pendency-jars/commons-lang3-3.3.2.jar dependency-jars/sesame-reposito
+ ry-dataset-4.1.1.jar dependency-jars/sesame-http-protocol-4.1.1.jar d
+ ependency-jars/sesame-rio-api-4.1.1.jar dependency-jars/sesame-rio-da
+ tatypes-4.1.1.jar dependency-jars/sesame-rio-languages-4.1.1.jar depe
+ ndency-jars/sesame-rio-binary-4.1.1.jar dependency-jars/sesame-rio-js
+ onld-4.1.1.jar dependency-jars/jsonld-java-0.7.0.jar dependency-jars/
+ jackson-databind-2.3.3.jar dependency-jars/jackson-annotations-2.3.0.
+ jar dependency-jars/httpclient-osgi-4.2.5.jar dependency-jars/httpmim
+ e-4.2.5.jar dependency-jars/httpclient-cache-4.2.5.jar dependency-jar
+ s/fluent-hc-4.2.5.jar dependency-jars/httpcore-osgi-4.2.5.jar depende
+ ncy-jars/httpcore-nio-4.2.5.jar dependency-jars/jcl-over-slf4j-1.7.9.
+ jar dependency-jars/commons-io-2.4.jar dependency-jars/sesame-rio-ntr
+ iples-4.1.1.jar dependency-jars/sesame-rio-nquads-4.1.1.jar dependenc
+ y-jars/sesame-rio-n3-4.1.1.jar dependency-jars/sesame-rio-rdfjson-4.1
+ .1.jar dependency-jars/sesame-rio-rdfxml-4.1.1.jar dependency-jars/se
+ same-rio-trix-4.1.1.jar dependency-jars/sesame-rio-turtle-4.1.1.jar d
+ ependency-jars/sesame-rio-trig-4.1.1.jar dependency-jars/sesame-sail-
+ inferencer-4.1.1.jar dependency-jars/sesame-sail-model-4.1.1.jar depe
+ ndency-jars/sesame-sail-lucene-4.1.1.jar dependency-jars/sesame-sail-
+ lucene-api-4.1.1.jar dependency-jars/spatial4j-0.4.1.jar dependency-j
+ ars/lucene-core-5.1.0.jar dependency-jars/lucene-queries-5.1.0.jar de
+ pendency-jars/lucene-highlighter-5.1.0.jar dependency-jars/lucene-joi
+ n-5.1.0.jar dependency-jars/lucene-memory-5.1.0.jar dependency-jars/l
+ ucene-analyzers-common-5.1.0.jar dependency-jars/lucene-queryparser-5
+ .1.0.jar dependency-jars/lucene-sandbox-5.1.0.jar dependency-jars/luc
+ ene-spatial-5.1.0.jar dependency-jars/lucene-misc-5.1.0.jar dependenc
+ y-jars/animal-sniffer-annotations-1.14.jar dependency-jars/sesame-sai
+ l-memory-4.1.1.jar dependency-jars/sesame-sail-base-4.1.1.jar depende
+ ncy-jars/sesame-sail-spin-4.1.1.jar dependency-jars/sesame-spin-4.1.1
+ .jar dependency-jars/sesame-queryrender-4.1.1.jar dependency-jars/ses
+ ame-sail-nativerdf-4.1.1.jar dependency-jars/slf4j-log4j12-1.7.5.jar 
+ dependency-jars/log4j-1.2.17.jar dependency-jars/commons-logging-1.1.
+ 1.jar
+Build-Jdk: 1.8.0_77
+Created-By: Maven Integration for Eclipse
+

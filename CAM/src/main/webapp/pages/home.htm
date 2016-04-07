@@ -1,0 +1,42 @@
+<!-- <div class="row"> -->
+<!--     <div class="col-md-6 col-md-offset-3"> -->
+<!--         <h4>Forecast by City</h4> -->
+<!--         <div class="form-group"> -->
+<!--             <input type="text" ng-model="city" class="form-control" /> -->
+<!--         </div> -->
+<!--         <a href="#/forecast" class="btn btn-primary">Get Forecast</a> -->
+<!--     </div> -->
+<!-- </div> -->
+<div class="row-fluid">
+	<div style="width: 30%; float:left">
+	 <div style="margin:10px 0 30px 0; padding:10px; background-color:#EEEEEE; border-radius:5px; font:12px Tahoma;">
+      <span><b>Selected Node</b> : {{currentNode.roleName}}</span>
+    </div>
+	<div
+      data-angular-treeview="true"
+      data-tree-model="roleList"
+      data-node-id="roleId"
+      data-node-label="roleName"
+      data-node-children="children" >
+    </div>
+	
+	</div>
+	<div name="asset-table-container" style="width: 70%; float:right;">
+	<div style="border-left: 0.1em solid #CCC; padding-left: 10px;">
+		<table my-table="overrideOptions" aa-data="sampleProductCategories"
+			ao-column-defs="columnDefs" fn-row-callback="myCallback"
+			class="cam-data-table">
+			<thead>
+				<tr>
+					<th style="width: 150px">Asset</th>
+					<th style="width: 150px">Class</th>
+					<th style="width: 150px">Model</th>
+					<th style="width: 150px">Owner</th>
+					<th style="width: 150px">Created</th>
+					<th style="width: 178px">Actions</th>
+				</tr>
+			</thead>
+		</table>
+		</div>
+	</div>
+</div>
