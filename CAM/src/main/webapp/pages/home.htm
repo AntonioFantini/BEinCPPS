@@ -8,20 +8,24 @@
 <!--     </div> -->
 <!-- </div> -->
 <div class="row-fluid">
-	<div style="width: 30%; float: left">
+	<div style="width: 18%; float: left">
 		<div
-			style="margin: 10px 0 30px 0; padding: 10px; background-color: #EEEEEE; border-radius: 5px; font: 12px Tahoma;">
-			<span><b>Selected Class</b> : {{currentNode.className}}</span>
+			style="margin: 10px 10px 30px 0; padding: 10px; background-color: #EEEEEE; border-radius: 5px; font: 12px Tahoma;">
+			<span>Asset Classes</span>
 		</div>
 		<div data-angular-treeview="true" data-tree-model="classList"
 			data-node-id="classId" data-node-label="className"
 			data-node-children="children"></div>
 
 	</div>
-	<div name="asset-table-container" style="width: 70%; float: right;">
+	<div name="asset-table-container" style="width: 82%; float: right;">
 		<div style="border-left: 0.1em solid #CCC; padding-left: 10px;">
+		<div
+			style="margin: 10px 0 30px 0; padding: 10px; background-color: #EEEEEE; border-radius: 5px; font: 12px Tahoma;">
+			<span><b>Instances of class</b> : {{currentNode.className}}</span>
+		</div>
 			<table asset-table="overrideOptions" aa-data="assetList"
-				ao-column-defs="columnDefs" class="cam-data-table">
+				ao-column-defs="columnDefs" class="cam-data-table" class="table">
 				<thead>
 					<tr>
 						<th style="width: 150px">Asset</th>
