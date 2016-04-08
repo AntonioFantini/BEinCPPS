@@ -1,24 +1,8 @@
 // CONTROLLERS
 camApp.controller('homeController', [
 		'$scope',
-		'cityService',
-		function($scope, cityService) {
-
-			$scope.message = '';
-
-			$scope.myCallback = function(nRow, aData, iDisplayIndex,
-					iDisplayIndexFull) {
-				$('td:eq(2)', nRow).bind('click', function() {
-					$scope.$apply(function() {
-						$scope.someClickHandler(aData);
-					});
-				});
-				return nRow;
-			};
-
-			$scope.someClickHandler = function(info) {
-				$scope.message = 'clicked: ' + info.price;
-			};
+		'$http',
+		function($scope, $http) {
 
 			$scope.columnDefs = [ {
 				"mDataProp" : "asset",
@@ -50,221 +34,51 @@ camApp.controller('homeController', [
 				"bInfo" : true,
 				"bDestroy" : true
 			};
+			
+			$scope.assetList = [];
 
-			$scope.sampleProductCategories = [
-
-			{
-				"asset" : "exampleAsset",
-				"class" : "exampleClass",
-				"model" : "exampleModel",
-				"owner" : "ME",
-				"created" : "2016-04-08",
-				"action" : "x"
-			}, {
-				"asset" : "exampleAsset_2",
-				"class" : "exampleClass_2",
-				"model" : "exampleModel_2",
-				"owner" : "ME",
-				"created" : "2016-04-08",
-				"action" : "x"
-			}, {
-				"asset" : "exampleAsset_3",
-				"class" : "exampleClass_3",
-				"model" : "exampleModel_3",
-				"owner" : "ME",
-				"created" : "2016-04-08",
-				"action" : "x"
-			}, {
-				"asset" : "exampleAsset",
-				"class" : "exampleClass",
-				"model" : "exampleModel",
-				"owner" : "ME",
-				"created" : "2016-04-08",
-				"action" : "x"
-			}, {
-				"asset" : "exampleAsset_2",
-				"class" : "exampleClass_2",
-				"model" : "exampleModel_2",
-				"owner" : "ME",
-				"created" : "2016-04-08",
-				"action" : "x"
-			}, {
-				"asset" : "exampleAsset_3",
-				"class" : "exampleClass_3",
-				"model" : "exampleModel_3",
-				"owner" : "ME",
-				"created" : "2016-04-08",
-				"action" : "x"
-			}, {
-				"asset" : "exampleAsset",
-				"class" : "exampleClass",
-				"model" : "exampleModel",
-				"owner" : "ME",
-				"created" : "2016-04-08",
-				"action" : "x"
-			}, {
-				"asset" : "exampleAsset_2",
-				"class" : "exampleClass_2",
-				"model" : "exampleModel_2",
-				"owner" : "ME",
-				"created" : "2016-04-08",
-				"action" : "x"
-			}, {
-				"asset" : "exampleAsset_3",
-				"class" : "exampleClass_3",
-				"model" : "exampleModel_3",
-				"owner" : "ME",
-				"created" : "2016-04-08",
-				"action" : "x"
-			}, {
-				"asset" : "exampleAsset",
-				"class" : "exampleClass",
-				"model" : "exampleModel",
-				"owner" : "ME",
-				"created" : "2016-04-08",
-				"action" : "x"
-			}, {
-				"asset" : "exampleAsset_2",
-				"class" : "exampleClass_2",
-				"model" : "exampleModel_2",
-				"owner" : "ME",
-				"created" : "2016-04-08",
-				"action" : "x"
-			}, {
-				"asset" : "exampleAsset_3",
-				"class" : "exampleClass_3",
-				"model" : "exampleModel_3",
-				"owner" : "ME",
-				"created" : "2016-04-08",
-				"action" : "x"
-			}
-
-			];
-
-			$scope.roleList1 = [ {
-				"roleName" : "User",
-				"roleId" : "role1",
+//			$http.get('resources/asset.json').then(function(response) {
+//				$scope.assetList = $scope.formatAssetListTable(response.data);
+//			});
+			
+			$scope.classList1 = [ {
+				"className" : "Root",
+				"classId" : "root",
 				"children" : [ {
-					"roleName" : "subUser1",
-					"roleId" : "role11",
+					"className" : "Example Class",
+					"classId" : "exclass",
 					"children" : []
-				}, {
-					"roleName" : "subUser2",
-					"roleId" : "role12",
-					"children" : [ {
-						"roleName" : "subUser2-1",
-						"roleId" : "role121",
-						"children" : [ {
-							"roleName" : "subUser2-1-1",
-							"roleId" : "role1211",
-							"children" : []
-						}, {
-							"roleName" : "subUser2-1-2",
-							"roleId" : "role1212",
-							"children" : []
-						} ]
-					} ]
-				} ]
-			},
-
-			{
-				"roleName" : "Admin",
-				"roleId" : "role2",
-				"children" : []
-			},
-
-			{
-				"roleName" : "Guest",
-				"roleId" : "role3",
-				"children" : []
-			} ];
-
-			// test tree model 2
-			$scope.roleList2 = [ {
-				"roleName" : "User",
-				"roleId" : "role1",
-				"children" : [ {
-					"roleName" : "subUser1",
-					"roleId" : "role11",
-					"collapsed" : true,
-					"children" : []
-				}, {
-					"roleName" : "subUser2",
-					"roleId" : "role12",
-					"collapsed" : true,
-					"children" : [ {
-						"roleName" : "subUser2-1",
-						"roleId" : "role121",
-						"children" : [ {
-							"roleName" : "subUser2-1-1",
-							"roleId" : "role1211",
-							"children" : []
-						}, {
-							"roleName" : "subUser2-1-2",
-							"roleId" : "role1212",
-							"children" : []
-						} ]
-					} ]
-				} ]
-			},
-
-			{
-				"roleName" : "Admin",
-				"roleId" : "role2",
-				"children" : [ {
-					"roleName" : "subAdmin1",
-					"roleId" : "role11",
-					"collapsed" : true,
-					"children" : []
-				}, {
-					"roleName" : "subAdmin2",
-					"roleId" : "role12",
-					"children" : [ {
-						"roleName" : "subAdmin2-1",
-						"roleId" : "role121",
-						"children" : [ {
-							"roleName" : "subAdmin2-1-1",
-							"roleId" : "role1211",
-							"children" : []
-						}, {
-							"roleName" : "subAdmin2-1-2",
-							"roleId" : "role1212",
-							"children" : []
-						} ]
-					} ]
-				} ]
-			},
-
-			{
-				"roleName" : "Guest",
-				"roleId" : "role3",
-				"children" : [ {
-					"roleName" : "subGuest1",
-					"roleId" : "role11",
-					"children" : []
-				}, {
-					"roleName" : "subGuest2",
-					"roleId" : "role12",
-					"collapsed" : true,
-					"children" : [ {
-						"roleName" : "subGuest2-1",
-						"roleId" : "role121",
-						"children" : [ {
-							"roleName" : "subGuest2-1-1",
-							"roleId" : "role1211",
-							"children" : []
-						}, {
-							"roleName" : "subGuest2-1-2",
-							"roleId" : "role1212",
-							"children" : []
-						} ]
-					} ]
 				} ]
 			} ];
 
 			// roleList1 to treeview
-			$scope.roleList = $scope.roleList1;
-
+			$scope.classList = $scope.classList1;
+			
+			
+			//funzioni di utilità
+			
+			$scope.loadAsset = function(){
+//				alert($scope.currentNode); //per recuperare il nodo da passare in input a servizio rest
+				if($scope.currentNode.classId == 'exclass'){
+					$http.get('resources/asset.json').then(function(response) {
+						$scope.assetList = $scope.formatAssetListTable(response.data);
+					});
+				}else{
+					
+					$http.get('resources/asset.json').then(function(response) {
+						$scope.assetList = [];
+					});
+				}
+			}
+			
+			$scope.formatAssetListTable = function(data){
+				if(!data)
+					return [];
+				for(var i = 0; i <data.length; i++){
+					data[i].action = '<div><input class="cam-table-button" type="image" src="img/remove.png"><input class="cam-table-button" type="image" src="img/search.png"><input class="cam-table-button" type="image" src="img/plus.png"></input></div>';
+				}
+				return data;
+			};
 		} ]);
 
 camApp.controller('forecastController', [

@@ -2,6 +2,11 @@ html, body, input, select, textarea {
 	font-size: 1.05em;
 }
 
+
+#cam-header{
+	margin-left:6%;
+}
+
 .ng-invalid {
 	border: 1px solid red;
 }
@@ -15,6 +20,14 @@ body, td, th {
 	margin: 0;
 }
 
+th{
+   	text-align:center !important;
+}
+
+td{
+   	text-align:center !important;
+}
+
 table {
 	border-collapse: separate;
 	border-spacing: 2px;
@@ -24,6 +37,16 @@ table {
 	-moz-box-sizing: border-box;
 	text-indent: 0;
 }
+
+.DataTables_sort_icon{
+	float : right !important
+}
+
+.cam-table-button{
+	margin-left: 4px;
+	margin-right: 13px;
+}
+
 
 a:link, a:visited, a:hover {
 	color: #5D6DB6;
@@ -113,11 +136,5 @@ div[data-tree-model] li .selected {
   font-weight: bold;
   padding: 1px 5px;
 }
-
-#cam-header{
-	margin-left:6%;
-}
-    
-    
     
     

@@ -1,11 +1,11 @@
 // DIRECTIVES
-camApp.directive('myTable', function() {
+camApp.directive('assetTable', function() {
     return function(scope, element, attrs) {
 
         // apply DataTable options, use defaults if none specified by user
         var options = {};
-        if (attrs.myTable.length > 0) {
-            options = scope.$eval(attrs.myTable);
+        if (attrs.assetTable.length > 0) {
+            options = scope.$eval(attrs.assetTable);
         } else {
             options = {
                 "bStateSave": true,
@@ -36,9 +36,9 @@ camApp.directive('myTable', function() {
             options["aoColumnDefs"] = scope.$eval(attrs.aoColumnDefs);
         }
         
-        if (attrs.fnRowCallback) {
-            options["fnRowCallback"] = scope.$eval(attrs.fnRowCallback);
-        }
+//        if (attrs.fnRowCallback) {
+//            options["fnRowCallback"] = scope.$eval(attrs.fnRowCallback);
+//        }
 
         // apply the plugin
         var dataTable = element.dataTable(options);
