@@ -75,7 +75,9 @@ camApp.controller('homeController', [
 				if(!data)
 					return [];
 				for(var i = 0; i <data.length; i++){
-					data[i].action = '<div><i class="fa fa-remove cam-table-button"></i><i class="fa fa-search cam-table-button"></i><i class="fa fa-plus cam-table-button"></i></div>';
+					data[i].action = '<div><i data-toggle="tooltip" title="Delete asset model" class="fa fa-remove cam-table-button"></i><i data-toggle="tooltip" title="Open detail" class="fa fa-search cam-table-button"></i>';
+					if(data[i].isModel == 'true')
+						data[i].action +='<i data-toggle="tooltip" title="Create new asset from this model" class="fa fa-plus cam-table-button"></i></div>';
 				}
 				return data;
 			};

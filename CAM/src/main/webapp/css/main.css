@@ -29,7 +29,7 @@ th {
 
 td {
 	font-family: "Times New Roman", Times, serif;
-	text-align:left;
+	text-align: left;
 }
 
 table {
@@ -40,6 +40,10 @@ table {
 	margin-top: 0;
 	-moz-box-sizing: border-box;
 	text-indent: 0;
+}
+
+span {
+	font-size: 13px;
 }
 
 .DataTables_sort_icon {
@@ -148,26 +152,30 @@ div[data-tree-model] li .selected {
 
 .cam-btn-add-container {
 	color: #000 !important;
-    float: right;
-    margin-top: 15px;
-    margin-right: 64px;
+	float: right;
+	margin-top: 15px;
+	margin-right: 64px;
 }
 
 .DataTables_sort_icon.css_right {
 	margin-right: 15px;
 }
-.ui-corner-right{
-	background-color:white !important;
+
+.ui-corner-right {
+	background-color: white !important;
 	border: none !important;
-	background-image:url(../img/arrow_right.png) !important;
+	background-image: url(../img/arrow_right.png) !important;
 }
 
-.ui-corner-left{
-	background-color:white !important;
+.ui-corner-left {
+	background-color: white !important;
 	border: none !important;
-	background-image:url(../img/arrow_left.png) !important;
+	background-image: url(../img/arrow_left.png) !important;
 }
 
-.ui-icon {
-	background-image:none !important; 
+.ui-corner-right .ui-icon {
+	background-image: none !important;
+}
+.ui-corner-left .ui-icon {
+	background-image: none !important;
 }

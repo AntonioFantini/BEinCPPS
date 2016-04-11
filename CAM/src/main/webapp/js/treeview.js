@@ -29,7 +29,6 @@
                     c.selected = "selected";
                     a.currentNode = c;
                     a.assetList = a.loadAsset();
-                    
                 }
                 ) : g.html($compile(k)(a)))
             }
