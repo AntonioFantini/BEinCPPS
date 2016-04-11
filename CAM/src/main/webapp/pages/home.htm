@@ -7,6 +7,14 @@
 <!--         <a href="#/forecast" class="btn btn-primary">Get Forecast</a> -->
 <!--     </div> -->
 <!-- </div> -->
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+    $('.ui-corner-right').tooltip();
+});
+</script>
+
 <div class="row-fluid">
 	<div style="width: 18%; float: left">
 		<div
@@ -37,7 +45,8 @@
 					</tr>
 				</thead>
 			</table>
-			<div class="cam-btn-add-container"><input type="image" title="New Asset Model" src="img/plus.png"/></div>
+<!-- 			<div class="cam-btn-add-container"><input type="image" title="New Asset Model" src="img/plus.png"/></div> -->
+			<a href="#" data-toggle="tooltip" title="New Asset Model" class="cam-btn-add-container"><i class="fa fa-plus-circle"> New asset model</i></a>
 		</div>
 	</div>
 	

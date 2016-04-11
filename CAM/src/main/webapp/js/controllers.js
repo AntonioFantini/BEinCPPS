@@ -75,7 +75,7 @@ camApp.controller('homeController', [
 				if(!data)
 					return [];
 				for(var i = 0; i <data.length; i++){
-					data[i].action = '<div><input class="cam-table-button" type="image" src="img/remove.png"><input class="cam-table-button" type="image" src="img/search.png"><input class="cam-table-button" type="image" src="img/plus.png"></input></div>';
+					data[i].action = '<div><i class="fa fa-remove cam-table-button"></i><i class="fa fa-search cam-table-button"></i><i class="fa fa-plus cam-table-button"></i></div>';
 				}
 				return data;
 			};
